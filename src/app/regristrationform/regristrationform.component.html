@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+ 
+    </head>
+    <body>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Registration Form</title>
+  
+</head>
+<body>
+     <div class="form-container">
+        <h1>Product Registration</h1>
+        <form  [formGroup]="frm"  >
+            <div class="form-group">
+                <label >Product Name</label>
+                <input type="text" id="product-name" name="pname" formControlName="pname" placeholder="Enter product name">
+                </div>
+            <small *ngIf=" frm.get('pname')?.touched && frm.get('pname')?.invalid">
+                <small *ngIf=" frm.get('pname')?.errors?.['minlenght']">user name is not less then 3 character</small>
+                <small *ngIf="frm.get('pname')?.errors?.['required']"> user name is required</small>
+               
+            </small>
+            
+            
+            <div class="form-group">
+                <label for="product-id">Product ID</label>
+                <input type="text" id="product-id" name="product-id" formControlName="pid" placeholder="Enter product ID" required>
+               <small *ngIf=" frm.get('pid')?.touched && frm.get('pid')?.dirty && frm.get('pid')?.invalid">
+                <small *ngIf="frm.get('pid')?.errors?.['required']">
+                Email is required </small>
+                <small *ngIf="frm.get('pid')?.errors?.['minlenght']">
+                    not less then 1 character
+                </small >
+                
+               </small>
+            </div>
+            <div class="form-group">
+                <label for="purchase-date">Purchase Date</label>
+                <input type="date" id="purchase-date" name="purchase-date" formControlName="pdate" required>
+                <small *ngIf="frm.get('pdate')?.touched && frm.get('pdate')?.invalid ">
+                    <small *ngIf="frm.get('pdate')?.errors?.['required']"> enter the purchased date</small>
+                </small>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" formControlName="email" required>
+            <small *ngIf="frm.get('email')?.touched ">
+                <small *ngIf="frm.get('email')?.invalid "> please enter the valid email address</small>
+            <small *ngIf="frm.get('email')?.errors?.['required']"> Email is required</small>
+            <small *ngIf="frm.get('email')?.errors?.['email']"> please enter the valid email address</small>
+            </small>   
+        </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" formControlName="pnumber" required>
+            <small *ngIf="frm.get('pnumber')?.touched">
+                <small *ngIf="frm.get('pnumber')?.invalid">please enter the valid phone</small>
+                <small *ngIf="frm.get('pnumber')?.errors?.['required']"> phone number is required</small>
+            </small>
+            </div> 
+            <div class="form-group">
+                <label for="comments">Additional Comments</label>
+                <textarea id="comments" name="comments" formControlName="addcomment" placeholder="Enter any additional details" ></textarea>
+            </div>
+            <small *ngIf=" frm.get('addcomment')?.touched && frm.get('addcomment')?.invalid">
+              <small *ngIf="frm.get('addcomment')?.errors?.['required']">  commants are required</small>
+              <small *ngIf="frm.get('addcomment')?.errors?.['minlenght']"> minimum 30 charchter required</small>
+            </small>
+            <button type="submit" class="btn-submit" (click)="funb()">Register Product</button>
+        </form>
+    </div>
+</body>
+</html>
+    </body>
+</html>
+

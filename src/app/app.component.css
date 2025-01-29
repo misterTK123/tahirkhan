@@ -1,0 +1,10 @@
+nav{
+    
+    justify-content: space-between;
+    background-color:#D3E3FD;
+    padding: 1rem;
+}
+   a{
+    text-decoration: none;
+    margin: 0 1rem;
+   }

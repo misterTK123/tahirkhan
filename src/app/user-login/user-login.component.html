@@ -1,0 +1,28 @@
+
+<form class="form-a">
+    <h4>Login</h4>
+    <div class="merg">
+    <div>
+        <label>Email</label>
+    <div>
+        <input type="email" name="EmailId" [(ngModel)]="loginobject.EmailId"  >
+        
+    </div>
+    </div>
+    <div>
+        <label>Password</label>
+        <div>
+            <input type="password" name="Password"  [(ngModel)]="loginobject.Password"  >
+        </div>
+    </div>
+  
+    <div>
+        <button (click)="userlogin()">Submit</button>
+    </div>
+    <div>
+        <button (click)="fungotosignin()">Signin Here</button>
+    </div>
+    </div>
+
+  
+</form>

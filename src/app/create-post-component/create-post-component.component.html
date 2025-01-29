@@ -1,0 +1,14 @@
+<form (submit)="submittpost()">
+    <div>
+       <p>Title</p>
+        <input type="text" [(ngModel)]="post.pasttitle" name="pasttitle">
+    </div>
+    <div>
+     <p>Body</p>
+       <textarea [(ngModel)]="post.postbody" name="postbody"></textarea>
+    </div>
+    <div>
+        <button >Submit</button>
+    </div>
+
+</form>

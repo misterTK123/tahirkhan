@@ -1,0 +1,34 @@
+
+
+<form  [formGroup]="frnsignin" class="form-a">
+    <h4>Signin</h4>
+    <div class="merg">
+    <div>
+        <label>Firstname</label>
+    <div>
+        <input type="text" formControlName="firstname">
+    </div>
+    <label>Lastname</label>
+    <div>
+        <input type="text"  formControlName="lastname">
+    </div>
+    <label>Email</label>
+    <div>
+        <input type="text" formControlName="EmailId" >
+    </div>
+    </div>
+    <div>
+        <label>Password</label>
+        <div>
+            <input type="password"  formControlName="Password">
+        </div>
+    </div>
+  
+    <div>
+        <button (click)="userpostapi()">Submit</button>
+    </div>
+ 
+    </div>
+
+  
+</form>

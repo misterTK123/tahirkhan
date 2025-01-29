@@ -1,0 +1,30 @@
+.form-a{
+    height: 400px;
+    width: 300px;
+    margin: 20px 0px 0px 40%;
+    border-radius: 7px;
+    background-color: #D3E3FD;
+}
+form:hover{
+    box-shadow: blue 1px 1px 10px 2px;
+}
+h4{
+    padding-top: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.merg{
+    margin:0px 0px 5px 20%; 
+}
+button{
+    margin: 10px 0px 4px 27%;
+    border-radius: 4px;
+    border: 2px solid #D3E3FD;
+}
+button:hover{
+    box-shadow: blue 1px 1px 10px 2px;
+}
+a{
+    margin:15px 0px 0px  50%;
+}

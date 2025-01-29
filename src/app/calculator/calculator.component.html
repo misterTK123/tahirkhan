@@ -1,0 +1,19 @@
+<div class="container">
+    <form [formGroup]="frmgroup">
+        <h4>Calculator</h4>
+        <div>
+            <input type="text" readonly [value]="textarea">
+        </div>
+        <div>
+
+          
+            <button   >/</button>
+            <button [value]="multiply" >*</button>
+            <button [value]="minus" >-</button>
+            <button (click)="funadd('+')" >+</button>
+            <button *ngFor="let buttons of buttonelements" (click)="exe(buttons)">{{buttons}}</button>
+            <button (click)="exe()" >=</button>
+        </div>
+    </form>
+
+</div>
